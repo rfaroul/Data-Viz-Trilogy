@@ -6,11 +6,6 @@ Over $2 billion has been raised using the massively successful crowdfunding serv
 
 Getting funded on Kickstarter requires meeting or exceeding the project's initial goal, so many organizations spend months looking through past projects in an attempt to discover some trick for finding success. For this week's homework, you will organize and analyze a database of 4,000 past projects in order to uncover any hidden trends.
 
-### Before You Begin
-
-1. Create a new space for this project called `excel-challenge` in either DropBox or Google Drive. **Do not add this homework to an existing space**.
-
-2. Store your excel workbooks in here and create a sharable link for submission.
 
 ## Instructions
 
@@ -94,9 +89,7 @@ Using the Excel table provided, modify and analyze the data of 4,000 past Kickst
 
 * Create a line chart that graphs the relationship between a goal's amount and its chances at success, failure, or cancellation.
 
-## Submission
 
-* To submit your homework, upload the solution and files to a GitHub repo, Dropbox, or Google Drive and submit the link to <https://bootcampspot.com/>.
 
 - - -
 
