@@ -70,8 +70,18 @@ with open(output_file, 'w', newline = '') as txtfile:
 #7. print to terminal
 
 
-#print(f"total votes cast: {total_votes}")
-#print(f"list of candidates: {list_of_candidates}") #alphabetize to cross-check spelling
-#print(f"candidate vote tally: {candidate_tally}")
-#print(f"percentages: {percentages}")
-print(winner)
+print(f"\nElection Results\n"
+          f"---------------------------- \n"
+    f"Total Votes: {total_votes} \n" 
+    f"---------------------------- \n"
+    f" \n")
+for candidate in percentages:
+    print(f"{candidate}: {percentages[candidate]:.3f}% \n")
+    
+
+
+print(f"---------------------------- \n"
+      f"Election Results \n"
+      f"---------------------------- \n"
+    f"Winner: {winner}\n" 
+    f"----------------------------\n")
