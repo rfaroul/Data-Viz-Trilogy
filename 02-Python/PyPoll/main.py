@@ -31,57 +31,41 @@ with open(election_data_file, newline = "") as election_file:
 
         vote_counts(row[2])
         
-    #3. The percentage of votes each candidate won
+    #The percentage of votes each candidate won
         for candidate in candidate_tally:
             percentages[candidate] = (candidate_tally[candidate]/ total_votes) * 100
 
    
-  
-  
-    
-
+#write to file
 with open(output_file, 'w', newline = '') as txtfile:
     election_output = (f"\nElection Results\n"
           f"----------------------------\n"
     f"Total Votes: {total_votes}\n" 
-    f"----------------------------\n"
-    f" \n"
-    )  
+    f"----------------------------\n")  
     
      #5. The winner of the election based on popular vote
     winner = max(candidate_tally, key = candidate_tally.get)
-    winner_output = (f"---------------------------- \n"
-                     f"Winner: {winner} \n"
+    winner_output = (f"Winner: {winner} \n"
                      f"---------------------------- \n")
     
     txtfile.write(election_output)
     txtfile.write(winner_output)
     
     for candidate, tally in percentages.items():
-        vote_count_output = (f"{candidate}: {percentages[candidate]:.3f}%\n")    
+        vote_count_output = (f"{candidate}: {percentages[candidate]:.3f}% ({candidate_tally[candidate]})\n")    
 
         txtfile.write(vote_count_output)
-        
     
-    
-#6. export text file
-            ##loop through dictionaries and write to file with proper syntax
-            #convert "percentages"  values to percentages
-#7. print to terminal
 
-
+#Print to terminal
 print(f"\nElection Results\n"
           f"---------------------------- \n"
     f"Total Votes: {total_votes} \n" 
-    f"---------------------------- \n"
-    f" \n")
+    f"----------------------------")
 for candidate in percentages:
-    print(f"{candidate}: {percentages[candidate]:.3f}% \n")
-    
-
+    print(f"{candidate}: {percentages[candidate]:.3f}% ({candidate_tally[candidate]})")
 
 print(f"---------------------------- \n"
-      f"Election Results \n"
-      f"---------------------------- \n"
     f"Winner: {winner}\n" 
     f"----------------------------\n")
+
